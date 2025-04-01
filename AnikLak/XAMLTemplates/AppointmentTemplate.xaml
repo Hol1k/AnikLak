@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.XAMLTemplates.AppointmentTemplate">
+    <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+            Margin="5" Padding="12">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Сегодня, 15:00"
+                       FontSize="20" TextColor="Black"
+                       x:Name="date"/>
+                <Label Text="Фамилия Имя Отчество"
+                       FontSize="18" TextColor="#BF000000"
+                       x:Name="name"/>
+                <Label Text="• Услуга1&#10;• Услуга2&#10;• Услуга3"
+                       FontSize="18" TextColor="#BF000000"
+                       x:Name="services"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
+                <Label Text="(1400-15%)"
+                       FontSize="14" TextColor="#BF000000" HorizontalOptions="End"
+                       x:Name="priceCalculate"/>
+                <Label Text="1190₽"
+                       FontSize="36" TextColor="Black" HorizontalOptions="End"
+                       x:Name="price"/>
+                <Label Text="Стоимость"
+                       FontSize="14" TextColor="#BF000000" HorizontalOptions="End"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>

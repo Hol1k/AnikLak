@@ -5,11 +5,30 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AnikLak"
     Shell.FlyoutBehavior="Flyout"
-    Title="AnikLak">
+    Title="AnikLak"
+    BackgroundColor="#401D09"
+    TitleColor="#BFB49F"
+    ForegroundColor="#BFB49F"
+    FlyoutBackgroundColor="#BFB49F">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Записи"
+        ContentTemplate="{DataTemplate local:Appointments}"
+        Route="Appointments" AutomationProperties.IsInAccessibleTree="False"/>
+
+    <ShellContent
+        Title="Клиенты"
+        ContentTemplate="{DataTemplate local:Clients}"
+        Route="Clients" AutomationProperties.IsInAccessibleTree="False"/>
+
+    <ShellContent
+        Title="Инструменты"
+        ContentTemplate="{DataTemplate local:Tools}"
+        Route="Tools" AutomationProperties.IsInAccessibleTree="False"/>
+    
+    <ShellContent
+        Title="Материалы"
+        ContentTemplate="{DataTemplate local:Materials}"
+        Route="Materials" AutomationProperties.IsInAccessibleTree="False"/>
 
 </Shell>

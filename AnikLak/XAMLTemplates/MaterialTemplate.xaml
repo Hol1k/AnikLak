@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.XAMLTemplates.MaterialTemplate">
+    <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+            Margin="5" Padding="12">
+        <Grid ColumnSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Маски" LineBreakMode="TailTruncation" MaxLines="2"
+                       FontSize="20" TextColor="Black"
+                       x:Name="name"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
+                <Label Text="80" FontAttributes="Bold"
+                       FontSize="24" TextColor="Black" HorizontalOptions="Center"
+                       x:Name="count"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>

@@ -12,6 +12,7 @@
                    Margin="8,0"/>
         </Border>
         <Button BackgroundColor="#401D09" WidthRequest="290" HeightRequest="60" CornerRadius="10"
-                Text="Войти" TextColor="#BFB49F" FontSize="20"></Button>
+                Text="Войти" TextColor="#BFB49F" FontSize="20"
+                x:Name="Button" Clicked="OnLoginClicked"/>
     </VerticalStackLayout>
 </ContentPage>

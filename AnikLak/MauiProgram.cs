@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿#if ANDROID
+using Android.Widget;
+#endif
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Handlers;
 
 namespace AnikLak;
 
@@ -15,8 +19,20 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+        EntryHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
+        {
+#if ANDROID
+            if (handler.PlatformView is EditText nativeEditText)
+            {
+                nativeEditText.Background = null;
+
+                nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
+            }
+#endif
+        });
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();

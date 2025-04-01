@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.AuthorizationPage"
+             BackgroundColor="#8B7A66"
+             Title="AuthorizationPage">
+    <VerticalStackLayout Spacing="10" Margin="35" VerticalOptions="Center" HorizontalOptions="Center">
+        <Border Background="#BFB49F" Stroke="#BFB49F" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                Padding="4,0">
+            <Entry Background="#BFB49F" HeightRequest="60"
+                   FontSize="18" TextColor="#BF000000" Placeholder="Введите пароль" PlaceholderColor="#99000000"
+                   Margin="8,0"/>
+        </Border>
+        <Button BackgroundColor="#401D09" WidthRequest="290" HeightRequest="60" CornerRadius="10"
+                Text="Войти" TextColor="#BFB49F" FontSize="20"></Button>
+    </VerticalStackLayout>
+</ContentPage>

@@ -71,6 +71,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AppointmentEditing.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Appointments.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

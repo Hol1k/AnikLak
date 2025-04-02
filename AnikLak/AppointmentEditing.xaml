@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.AppointmentEditing"
+             Title="Изменить запись">
+    <ScrollView>
+        <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5">
+            
+            <!--Выбранный клиент-->
+            <Label Text="Клиент:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                    Margin="5" Padding="12"
+                    x:Name="chosedClientContainer">
+                <!--Клиент-->
+            </Border>
+            
+            <!--Выбранная дата-->
+            <HorizontalStackLayout>
+                <Label Text="Дата:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Background="#808C7E6C" Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                        Margin="5" Padding="5,0,5,0" VerticalOptions="Center">
+                    <DatePicker HeightRequest="40" VerticalOptions="Center" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
+                                x:Name="date"/>
+                </Border>
+            </HorizontalStackLayout>
+
+            <!--Статус записи-->
+            <HorizontalStackLayout>
+                <Label Text="Дата:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
+                <Border Background="#808C7E6C" Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                        Margin="5" VerticalOptions="Center">
+                    <Button Background="#00000000" Text="Статус" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
+                            x:Name="status" Padding="7,0,7,0"/>
+                </Border>
+            </HorizontalStackLayout>
+
+            <!--Список услуг-->
+            <Label Text="Список услуг:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2" Padding="12"
+                    x:Name="chosedServicesContainer">
+                <!--Услуги-->
+            </Border>
+            <!--Добавление услуги-->
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+            </Border>
+
+            <!--Список скидок-->
+            <Label Text="Список скидок:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2" Padding="12"
+                    x:Name="chosedDiscountsContainer">
+                <!--Скидки-->
+            </Border>
+            <!--Добавление скидки-->
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+            </Border>
+
+            <!--Список инструментов-->
+            <Label Text="Используемые инструменты:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Border Background="#00000000"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2" Padding="12"
+                    x:Name="chosedToolsContainer">
+                <!--Инструменты-->
+            </Border>
+            <!--Добавление инструментов-->
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+            </Border>
+
+            <!--Список материалов-->
+            <Label Text="Используемые материалы:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+            <Border Background="#00000000"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2" Padding="12"
+                    x:Name="chosedMaterialContainer">
+                <!--Материалы-->
+            </Border>
+            <!--Добавление материалов-->
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+            </Border>
+            
+            <!--Итоговая стоимость-->
+            <HorizontalStackLayout Margin="15,30,15,10" Spacing="5">
+                <Label Text="Итого:" TextColor="Black" FontSize="36" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Border Background="#338C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                        Margin="2" Padding="0">
+                    <Entry Text="0" TextColor="Black" FontSize="36" VerticalOptions="Center"
+                           Keyboard="Numeric" MinimumWidthRequest="30"/>
+                </Border>
+                <Label Text="₽" TextColor="Black" FontSize="36" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

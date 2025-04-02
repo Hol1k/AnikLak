@@ -31,6 +31,18 @@ public static class MauiProgram
 #endif
         });
 
+		DatePickerHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
+		{
+#if ANDROID
+            if (handler.PlatformView is EditText nativeEditText)
+            {
+                nativeEditText.Background = null;
+
+                nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
+            }
+#endif
+        });
+
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

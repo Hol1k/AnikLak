@@ -9,7 +9,7 @@ namespace AnikLak
 
         private void OnLoginClicked(object sender, EventArgs e)
 		{
-			Button button = (Button)sender;
-		}
+			Application.Current.MainPage = new AppShell();
+        }
     }
 }

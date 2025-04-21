@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
 
         <ScrollView Background="#BFB49F">
-            <VerticalStackLayout x:Name="stackLayout" Padding="5" Margin="0,0,0,120">
+            <VerticalStackLayout x:Name="stackLayout" Padding="5,5,5,110">
                 <!--Список записей-->
             </VerticalStackLayout>
         </ScrollView>
@@ -25,7 +25,7 @@
                      VerticalOptions="End"
                      Margin="20"
                      Padding="20"
-                     Clicked="AddNewClientClicked"/>
+                     Clicked="AddNewAppointmentClicked"/>
 
     </Grid>
 </ContentPage>

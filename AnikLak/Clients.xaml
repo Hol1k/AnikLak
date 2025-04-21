@@ -3,9 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnikLak.Clients"
              Title="Клиенты">
-    <ScrollView>
-        <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5">
+    <Grid>
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView>
+            <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5,5,5,110">
+                <!--Список клиентов-->
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <ImageButton Source="plus_white.svg"
+                     WidthRequest="80"
+                     HeightRequest="80"
+                     CornerRadius="40"
+                     BackgroundColor="#401D09"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"
+                     Margin="20"
+                     Padding="20"
+                     Clicked="AddNewClientClicked"/>
+
+    </Grid>
 </ContentPage>

@@ -34,9 +34,9 @@
                 <HorizontalStackLayout>
                     <Label Text="Дата:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Border Background="#808C7E6C" Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
-                        Margin="5" VerticalOptions="Center">
+                            Margin="5" VerticalOptions="Center">
                         <Button Background="#00000000" Text="Статус" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
-                            x:Name="status" Padding="7,0,7,0"/>
+                                x:Name="status" Padding="7,0,7,0"/>
                     </Border>
                 </HorizontalStackLayout>
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="AnikLak.AddMaterialsPopup"
+               VerticalOptions="End"
+               HorizontalOptions="Fill"
+               Color="#00000000">
+
+    <Border Background="Black" Stroke="#BFB49F" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,0,0">
+        <VerticalStackLayout Background="#BFB49F" HorizontalOptions="Fill">
+            <!--Шапка оверлея-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Text="Добавление материалов" TextColor="#401D09" FontSize="20" Margin="9" FontAttributes="Bold" Grid.Column="0"/>
+
+                <ImageButton Grid.Column="1"
+                             Source="complete_red.svg"
+                             VerticalOptions="Center"
+                             Margin="0,0,9,0"
+                             Clicked="ApplyAdding"/>
+            </Grid>
+            
+
+            <!--Подпись полей таблицы-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Материал" Grid.Column="0" Margin="9,0,9,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <Label Text="Количество" Grid.Column="1" Margin="9,0,9,0" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+
+            </Grid>
+            
+            <!--Список материалов-->
+            <VerticalStackLayout x:Name="addingMaterialsListContainer">
+                
+            </VerticalStackLayout>
+            
+            <!--Добавить материал-->
+            <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="9,4,9,10">
+                    <Button ImageSource="plus.svg" Scale="1.2" Background="#00000000"/>
+            </Border>
+
+    </VerticalStackLayout>
+    </Border>
+
+</toolkit:Popup>

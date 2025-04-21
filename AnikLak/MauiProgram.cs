@@ -1,6 +1,7 @@
 ﻿#if ANDROID
 using Android.Widget;
 #endif
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using Microsoft.Maui.Handlers;
 
@@ -13,6 +14,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -33,6 +35,18 @@ public static class MauiProgram
 
 		DatePickerHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
 		{
+#if ANDROID
+            if (handler.PlatformView is EditText nativeEditText)
+            {
+                nativeEditText.Background = null;
+
+                nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
+            }
+#endif
+        });
+
+        EditorHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
+        {
 #if ANDROID
             if (handler.PlatformView is EditText nativeEditText)
             {

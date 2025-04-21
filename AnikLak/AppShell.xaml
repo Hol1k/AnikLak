@@ -11,6 +11,10 @@
     ForegroundColor="#BFB49F"
     FlyoutBackgroundColor="#BFB49F">
 
+    <Shell.ToolbarItems>
+        <ToolbarItem IconImageSource="plus_white.png"/>
+    </Shell.ToolbarItems>
+
     <ShellContent
         Title="Записи"
         ContentTemplate="{DataTemplate local:Appointments}"

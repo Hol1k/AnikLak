@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.ToolEditing"
+             Title="Измененеие оборудования">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ScrollView>
+            <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5">
+
+                <!--Наименование инструмента-->
+                <Label Text="Наименование:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                    Margin="5">
+                    <Entry Text="Фреза алмазная пламя" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
+                           x:Name="name"/>
+                </Border>
+
+                <!--Количество инструментов-->
+                <HorizontalStackLayout>
+                    <Label Text="Количество:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                            Margin="5" VerticalOptions="Center">
+                        <Entry Text="5" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
+                               x:Name="count" Keyboard="Numeric"/>
+                    </Border>
+                </HorizontalStackLayout>
+
+                <!--Количество функционирующих инструментов-->
+                <HorizontalStackLayout>
+                    <Label Text="Функционирует:" Margin="5" TextColor="Black" FontSize="20"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                            Margin="5" VerticalOptions="Center">
+                        <Entry Text="5" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
+                               x:Name="functioningCount" Keyboard="Numeric"/>
+                    </Border>
+                    <Label Text="/5" Margin="5" TextColor="Black" FontSize="20"
+                           VerticalOptions="Center" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+
+                <!--Период обслуживания-->
+                <Label Text="Период обслуживания:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <HorizontalStackLayout>
+                    <Label Text="Каждые" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+                            VerticalOptions="Center">
+                        <Entry Text="1" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
+                               x:Name="maintenanceFrequency" Keyboard="Numeric"/>
+                    </Border>
+                    <Label Text="записи" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <ImageButton Source="complete.svg"
+                     WidthRequest="80"
+                     HeightRequest="80"
+                     CornerRadius="40"
+                     BackgroundColor="#401D09"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"
+                     Margin="20"
+                     Padding="20"
+                     Clicked="ApplyEditing"/>
+    </Grid>
+</ContentPage>

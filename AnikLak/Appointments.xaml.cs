@@ -15,7 +15,7 @@ public partial class Appointments : ContentPage
         stackLayout.Add(new AppointmentTemplate());
     }
 
-    private async void AddNewClientClicked(object? sender, EventArgs e)
+    private async void AddNewAppointmentClicked(object? sender, EventArgs e)
     {
         await Navigation.PushAsync(new AppointmentEditing());
     }

@@ -14,4 +14,9 @@ public partial class Tools : ContentPage
         stackLayout.Add(new ToolTemplate());
         stackLayout.Add(new ToolTemplate());
     }
+
+    private async void AddNewToolClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ToolEditing());
+    }
 }

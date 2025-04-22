@@ -1,0 +1,13 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip5_54">
+			<rect id="icons8-напоминания" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip5_54)">
+		<path id="path" d="M20 3.33C18.62 3.33 17.5 4.45 17.5 5.83L17.5 6.99C13.18 8.1 10 12 10 16.66L10 26.66L7.44 28.59C6.92 28.92 6.66 29.38 6.66 30C6.66 31.11 7.22 31.66 8.33 31.66L20 31.66L31.66 31.66C32.77 31.66 33.33 31.11 33.33 30C33.33 29.39 33.07 28.92 32.56 28.59L30 26.66L30 16.66C30 12 26.81 8.1 22.5 6.99L22.5 5.83C22.5 4.45 21.38 3.33 20 3.33ZM16.66 33.33C16.66 35.16 18.16 36.66 20 36.66C21.83 36.66 23.33 35.16 23.33 33.33L16.66 33.33Z" fill="#E0B76B" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

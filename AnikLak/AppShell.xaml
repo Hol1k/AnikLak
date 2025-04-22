@@ -12,7 +12,8 @@
     FlyoutBackgroundColor="#BFB49F">
 
     <Shell.ToolbarItems>
-        <ToolbarItem IconImageSource="plus_white.png"/>
+        <ToolbarItem IconImageSource="notifications.svg"
+                     Clicked="OpenNotifications"/>
     </Shell.ToolbarItems>
 
     <ShellContent

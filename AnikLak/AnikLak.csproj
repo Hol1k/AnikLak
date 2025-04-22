@@ -93,6 +93,9 @@
 	  <MauiXaml Update="Materials.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Notifications.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="ToolEditing.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

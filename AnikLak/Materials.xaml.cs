@@ -19,6 +19,6 @@ public partial class Materials : ContentPage
     {
         var popup = new AddMaterialsPopup();
 
-        this.ShowPopup(popup);
+        await this.ShowPopupAsync(popup);
     }
 }

@@ -42,54 +42,56 @@
 
                 <!--Список услуг-->
                 <Label Text="Список услуг:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
-                    Margin="2" Padding="12"
-                    x:Name="chosedServicesContainer">
+                <VerticalStackLayout x:Name="chosedServicesContainer">
                     <!--Услуги-->
-                </Border>
+                </VerticalStackLayout>
                 <!--Добавление услуги-->
                 <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="2">
-                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"
+                            Clicked="AddService"/>
                 </Border>
 
                 <!--Список скидок-->
                 <Label Text="Список скидок:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
-                    Margin="2" Padding="12"
-                    x:Name="chosedDiscountsContainer">
+                <VerticalStackLayout x:Name="chosedDiscountsContainer">
                     <!--Скидки-->
-                </Border>
+                </VerticalStackLayout>
                 <!--Добавление скидки-->
                 <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
-                    Margin="2">
-                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+                        Margin="2">
+                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"
+                            Clicked="AddDiscount"/>
                 </Border>
 
                 <!--Список инструментов-->
                 <Label Text="Используемые инструменты:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <Border Background="#00000000"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
-                    Margin="2" Padding="12"
-                    x:Name="chosedToolsContainer">
-                    <!--Инструменты-->
+                <Border Background="#00000000"  Stroke="#00000000" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                    <VerticalStackLayout x:Name="chosedToolsContainer">
+                        <!--Инструменты-->
+                    </VerticalStackLayout>
                 </Border>
                 <!--Добавление инструментов-->
                 <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="2">
-                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"
+                            Clicked="AddTool"/>
                 </Border>
 
                 <!--Список материалов-->
                 <Label Text="Используемые материалы:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <Border Background="#00000000"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
-                    Margin="2" Padding="12"
-                    x:Name="chosedMaterialContainer">
-                    <!--Материалы-->
+                <Border Background="#00000000"  Stroke="#00000000" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                    Margin="2">
+                    <VerticalStackLayout x:Name="chosedMaterialContainer">
+                        <!--Материалы-->
+                    </VerticalStackLayout>
                 </Border>
                 <!--Добавление материалов-->
                 <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="2">
-                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
+                    <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"
+                            Clicked="AddMaterial"/>
                 </Border>
 
                 <!--Итоговая стоимость-->
@@ -98,7 +100,8 @@
                     <Border Background="#338C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                         Margin="2" Padding="0">
                         <Entry Text="0" TextColor="Black" FontSize="36" VerticalOptions="Center"
-                           Keyboard="Numeric" MinimumWidthRequest="30"/>
+                               Keyboard="Numeric" MinimumWidthRequest="30"
+                               x:Name="_priceField"/>
                     </Border>
                     <Label Text="₽" TextColor="Black" FontSize="36" VerticalOptions="Center"/>
                 </HorizontalStackLayout>

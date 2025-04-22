@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.XAMLTemplates.AppointmentToolTemplate">
+    <Grid ColumnSpacing="2">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Border BackgroundColor="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                Padding="5,0,2,0" Grid.Column="0">
+            <Label Text="• Фреза алмазная пламя" FontSize="20" TextColor="#BF000000" FontAttributes="Bold"
+                   LineBreakMode="TailTruncation" VerticalOptions="Center"
+                   x:Name="_toolName" Grid.Column="0"/>
+        </Border>
+        <Border BackgroundColor="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                Padding="5,0,0,0" Grid.Column="1">
+            <Entry Text="1" FontSize="20" TextColor="#BF000000" FontAttributes="Bold"
+                   Keyboard="Numeric"
+                   Completed="VerifyToolCount" x:Name="_countField"/>
+        </Border>
+        <Border BackgroundColor="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
+                Padding="5,0,0,0" Grid.Column="2">
+            <Button ImageSource="x.svg" HorizontalOptions="End" Scale="1.5" Margin="-5,0,-1,0" Padding="0" BackgroundColor="#00000000"
+                    BorderWidth="0" VerticalOptions="Center" CornerRadius="2"
+                    Clicked="RemoveTool" Grid.Column="2"/>
+        </Border>
+    </Grid>
+</ContentView>

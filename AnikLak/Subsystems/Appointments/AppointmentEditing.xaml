@@ -42,7 +42,7 @@
 
                 <!--Список услуг-->
                 <Label Text="Список услуг:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <VerticalStackLayout x:Name="chosedServicesContainer">
+                <VerticalStackLayout x:Name="_chosedServicesContainer">
                     <!--Услуги-->
                 </VerticalStackLayout>
                 <!--Добавление услуги-->
@@ -54,7 +54,7 @@
 
                 <!--Список скидок-->
                 <Label Text="Список скидок:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
-                <VerticalStackLayout x:Name="chosedDiscountsContainer">
+                <VerticalStackLayout x:Name="_chosedDiscountsContainer">
                     <!--Скидки-->
                 </VerticalStackLayout>
                 <!--Добавление скидки-->
@@ -68,7 +68,7 @@
                 <Label Text="Используемые инструменты:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
                 <Border Background="#00000000"  Stroke="#00000000" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="2">
-                    <VerticalStackLayout x:Name="chosedToolsContainer">
+                    <VerticalStackLayout x:Name="_chosedToolsContainer" Spacing="5">
                         <!--Инструменты-->
                     </VerticalStackLayout>
                 </Border>
@@ -83,7 +83,7 @@
                 <Label Text="Используемые материалы:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
                 <Border Background="#00000000"  Stroke="#00000000" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="2">
-                    <VerticalStackLayout x:Name="chosedMaterialContainer">
+                    <VerticalStackLayout x:Name="_chosedMaterialsContainer" Spacing="5">
                         <!--Материалы-->
                     </VerticalStackLayout>
                 </Border>

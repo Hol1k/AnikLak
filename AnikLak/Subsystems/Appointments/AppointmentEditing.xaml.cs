@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Views;
 using AnikLak.XAMLTemplates.AppointmentEditingFields;
 
 namespace AnikLak.Subsystems.Appointments;
@@ -18,32 +19,38 @@ public partial class AppointmentEditing : ContentPage
         InitializeComponent();
     }
 
-    private void AddService(object? sender, EventArgs e)
+    private async void AddService(object? sender, EventArgs e)
     {
-        chosedServicesContainer.Add(new AppointmentServiceTemplate("Услуга1", 800, chosedServicesContainer));
-        RecalculatePrice();
+        var popup = new AddServicePopup(_chosedServicesContainer, this);
+
+        await this.ShowPopupAsync(popup);
     }
 
-    private void AddDiscount(object? sender, EventArgs e)
+    private async void AddDiscount(object? sender, EventArgs e)
     {
-        chosedDiscountsContainer.Add(new AppointmentDiscountTemplate("Первое посещение", 10f, chosedDiscountsContainer));
-        RecalculatePrice();
+        var popup = new AddDiscountPopup(_chosedDiscountsContainer, this);
+
+        await this.ShowPopupAsync(popup);
     }
 
-    private void AddTool(object? sender, EventArgs e)
+    private async void AddTool(object? sender, EventArgs e)
     {
-        chosedToolsContainer.Add(new AppointmentToolTemplate("Фреза алмазная пламя", 1, chosedToolsContainer));
+        var popup = new AddToolPopup(_chosedToolsContainer);
+
+        await this.ShowPopupAsync(popup);
     }
 
-    private void AddMaterial(object? sender, EventArgs e)
+    private async void AddMaterial(object? sender, EventArgs e)
     {
-        chosedMaterialContainer.Add(new AppointmentMaterialTemplate("Апельсиновая палочка", 2, chosedMaterialContainer));
+        var popup = new AddMaterialPopup(_chosedMaterialsContainer);
+
+        await this.ShowPopupAsync(popup);
     }
 
-    private void RecalculatePrice()
+    public void RecalculatePrice()
     {
         decimal basePrice = 0;
-        foreach (var child in chosedServicesContainer)
+        foreach (var child in _chosedServicesContainer)
         {
             if (child is AppointmentServiceTemplate service)
             {
@@ -51,7 +58,7 @@ public partial class AppointmentEditing : ContentPage
             }
         }
         float discount = 0f;
-        foreach (var child in chosedDiscountsContainer)
+        foreach (var child in _chosedDiscountsContainer)
         {
             if (child is AppointmentDiscountTemplate discountTemplate)
             {

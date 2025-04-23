@@ -13,7 +13,7 @@ public partial class AppointmentServiceTemplate : ContentView
 
         _parent = parent;
 		_price = price;
-        _serviceName.Text = $"Х {serviceName} ({price})";
+        _serviceName.Text = $"Х {serviceName} ({(price <= 0 ? "Ѕесплатно" : price)})";
     }
 
     private void RemoveSrvice(object? sender, EventArgs e)

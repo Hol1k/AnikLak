@@ -3,7 +3,7 @@
     x:Class="AnikLak.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:AnikLak"
+    xmlns:local="clr-namespace:AnikLak.Subsystems"
     Shell.FlyoutBehavior="Flyout"
     Title="AnikLak"
     BackgroundColor="#401D09"
@@ -18,22 +18,22 @@
 
     <ShellContent
         Title="Записи"
-        ContentTemplate="{DataTemplate local:Appointments}"
+        ContentTemplate="{DataTemplate local:Appointments.AppointmentsList}"
         Route="Appointments" AutomationProperties.IsInAccessibleTree="False"/>
 
     <ShellContent
         Title="Клиенты"
-        ContentTemplate="{DataTemplate local:Clients}"
+        ContentTemplate="{DataTemplate local:Clients.ClientsList}"
         Route="Clients" AutomationProperties.IsInAccessibleTree="False"/>
 
     <ShellContent
         Title="Инструменты"
-        ContentTemplate="{DataTemplate local:Tools}"
+        ContentTemplate="{DataTemplate local:Tools.ToolsList}"
         Route="Tools" AutomationProperties.IsInAccessibleTree="False"/>
     
     <ShellContent
         Title="Материалы"
-        ContentTemplate="{DataTemplate local:Materials}"
+        ContentTemplate="{DataTemplate local:Materials.MaterialsList}"
         Route="Materials" AutomationProperties.IsInAccessibleTree="False"/>
 
 </Shell>

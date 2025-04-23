@@ -72,49 +72,49 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="AddMaterialsPopup.xaml">
+	  <MauiXaml Update="Subsystems\Materials\AddMaterialsPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="AppointmentEditing.xaml">
+	  <MauiXaml Update="Subsystems\Appointments\AppointmentEditing.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Appointments.xaml">
+	  <MauiXaml Update="Subsystems\Appointments\Appointments.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="AuthorizationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ClientEditing.xaml">
+	  <MauiXaml Update="Subsystems\Clients\ClientEditing.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Clients.xaml">
+	  <MauiXaml Update="Subsystems\Clients\Clients.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Materials.xaml">
+	  <MauiXaml Update="Subsystems\Materials\Materials.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Notifications.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ToolEditing.xaml">
+	  <MauiXaml Update="Subsystems\Tools\ToolEditing.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Tools.xaml">
+	  <MauiXaml Update="Subsystems\Tools\Tools.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="XAMLTemplates\AppointmentDiscountTemplate.xaml">
+	  <MauiXaml Update="XAMLTemplates\AppointmentEditingFields\AppointmentDiscountTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="XAMLTemplates\AppointmentMaterialTemplate.xaml">
+	  <MauiXaml Update="XAMLTemplates\AppointmentEditingFields\AppointmentMaterialTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="XAMLTemplates\AppointmentServiceTemplate.xaml">
+	  <MauiXaml Update="XAMLTemplates\AppointmentEditingFields\AppointmentServiceTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="XAMLTemplates\AppointmentTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="XAMLTemplates\AppointmentToolTemplate.xaml">
+	  <MauiXaml Update="XAMLTemplates\AppointmentEditingFields\AppointmentToolTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="XAMLTemplates\ClientTemplate.xaml">

@@ -1,10 +1,10 @@
 using AnikLak.XAMLTemplates;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Appointments;
 
-public partial class Appointments : ContentPage
+public partial class AppointmentsList : ContentPage
 {
-	public Appointments()
+	public AppointmentsList()
 	{
 		InitializeComponent();
 

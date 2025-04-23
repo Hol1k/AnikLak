@@ -1,4 +1,4 @@
-namespace AnikLak.XAMLTemplates;
+namespace AnikLak.XAMLTemplates.AppointmentEditingFields;
 
 public partial class AppointmentMaterialTemplate : ContentView
 {

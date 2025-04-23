@@ -1,11 +1,11 @@
 using AnikLak.XAMLTemplates;
 using CommunityToolkit.Maui.Views;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Materials;
 
-public partial class Materials : ContentPage
+public partial class MaterialsList : ContentPage
 {
-	public Materials()
+	public MaterialsList()
 	{
 		InitializeComponent();
 

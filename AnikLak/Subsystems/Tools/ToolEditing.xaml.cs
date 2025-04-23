@@ -1,4 +1,4 @@
-namespace AnikLak;
+namespace AnikLak.Subsystems.Tools;
 
 public partial class ToolEditing : ContentPage
 {

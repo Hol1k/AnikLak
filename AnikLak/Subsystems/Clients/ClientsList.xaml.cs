@@ -1,10 +1,10 @@
 using AnikLak.XAMLTemplates;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Clients;
 
-public partial class Clients : ContentPage
+public partial class ClientsList : ContentPage
 {
-	public Clients()
+	public ClientsList()
 	{
 		InitializeComponent();
 

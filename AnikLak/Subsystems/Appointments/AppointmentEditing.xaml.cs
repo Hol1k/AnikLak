@@ -1,6 +1,6 @@
-using AnikLak.XAMLTemplates;
+using AnikLak.XAMLTemplates.AppointmentEditingFields;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Appointments;
 
 public partial class AppointmentEditing : ContentPage
 {

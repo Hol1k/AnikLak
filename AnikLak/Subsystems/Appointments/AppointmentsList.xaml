@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AnikLak.Materials"
-             Title="Материалы">
+             x:Class="AnikLak.Subsystems.Appointments.AppointmentsList"
+             Title="Записи">
     <Grid>
-
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <ScrollView>
-            <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5,5,5,110">
-                <!--Список клиентов-->
+        <ScrollView Background="#BFB49F">
+            <VerticalStackLayout x:Name="stackLayout" Padding="5,5,5,110">
+                <!--Список записей-->
             </VerticalStackLayout>
         </ScrollView>
 
@@ -25,6 +25,7 @@
                      VerticalOptions="End"
                      Margin="20"
                      Padding="20"
-                     Clicked="AddMaterialsClicked"/>
+                     Clicked="AddNewAppointmentClicked"/>
+
     </Grid>
 </ContentPage>

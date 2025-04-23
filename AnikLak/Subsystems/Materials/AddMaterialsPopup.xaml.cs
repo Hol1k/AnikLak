@@ -1,7 +1,7 @@
 using AnikLak.XAMLTemplates;
 using CommunityToolkit.Maui.Views;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Materials;
 
 public partial class AddMaterialsPopup : Popup
 {

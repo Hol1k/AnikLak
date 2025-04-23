@@ -1,7 +1,7 @@
 using AnikLak.XAMLTemplates;
 using Microsoft.Maui.Layouts;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Clients;
 
 public partial class ClientEditing : ContentPage
 {

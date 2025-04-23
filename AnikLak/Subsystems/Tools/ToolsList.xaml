@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AnikLak.Clients"
-             Title="Клиенты">
+             x:Class="AnikLak.Subsystems.Tools.ToolsList"
+             Title="Инструменты">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -10,22 +10,23 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+
         <ScrollView>
             <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5,5,5,110">
-                <!--Список клиентов-->
+
             </VerticalStackLayout>
         </ScrollView>
 
         <ImageButton Source="plus_white.svg"
-                     WidthRequest="80"
-                     HeightRequest="80"
-                     CornerRadius="40"
-                     BackgroundColor="#401D09"
-                     HorizontalOptions="End"
-                     VerticalOptions="End"
-                     Margin="20"
-                     Padding="20"
-                     Clicked="AddNewClientClicked"/>
+                         WidthRequest="80"
+                         HeightRequest="80"
+                         CornerRadius="40"
+                         BackgroundColor="#401D09"
+                         HorizontalOptions="End"
+                         VerticalOptions="End"
+                         Margin="20"
+                         Padding="20"
+                         Clicked="AddNewToolClicked"/>
 
     </Grid>
 </ContentPage>

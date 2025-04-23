@@ -1,10 +1,10 @@
 using AnikLak.XAMLTemplates;
 
-namespace AnikLak;
+namespace AnikLak.Subsystems.Tools;
 
-public partial class Tools : ContentPage
+public partial class ToolsList : ContentPage
 {
-	public Tools()
+	public ToolsList()
 	{
 		InitializeComponent();
 

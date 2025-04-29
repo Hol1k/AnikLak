@@ -21,7 +21,9 @@ public partial class AddServicePopup : Popup
     {
         VerifyPrice();
 
-        _chosedServicesContainer.Add(new AppointmentServiceTemplate(_serviceName.Text, Convert.ToDecimal(_price.Text), _chosedServicesContainer));
+        decimal nonEmptyPrice = Convert.ToDecimal((_price.Text == null || _price.Text == string.Empty) ? "0" : _price.Text);
+
+        _chosedServicesContainer.Add(new AppointmentServiceTemplate(_serviceName.Text, nonEmptyPrice, _chosedServicesContainer));
         _appointmentEditingWindow.RecalculatePrice();
 
         await CloseAsync();
@@ -29,10 +31,13 @@ public partial class AddServicePopup : Popup
 
     private void VerifyPrice()
     {
-        if (Convert.ToInt32(_price.Text) < 0)
-        {
-            _price.Text = "0";
-        }
+        if (_price.Text == null || _price.Text == string.Empty)
+            return;
+
+        _price.Text = _price.Text.Replace('.', ',');
+
+        if (Convert.ToDouble(_price.Text) <= 0)
+            _price.Text = string.Empty;
     }
 
     private void VerifyPrice(object? sender, EventArgs e)

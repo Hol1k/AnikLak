@@ -41,7 +41,7 @@
                 <Label Text="Количество:" Margin="5" FontSize="20" FontAttributes="Bold" TextColor="Black" VerticalOptions="Center"/>
                 <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                         Margin="5" VerticalOptions="Center" MinimumWidthRequest="70">
-                    <Editor Text="0" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
+                    <Editor Placeholder="0" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
                             Keyboard="Numeric" x:Name="_toolCount" Completed="VerifyCount"/>
                 </Border>
             </HorizontalStackLayout>

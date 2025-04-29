@@ -18,12 +18,14 @@ public partial class AddToolPopup : Popup
     {
         VerifyCount();
 
-        if (_toolCount.Text == "0")
+        int nonEmptyCount = Convert.ToInt32((_toolCount.Text == null || _toolCount.Text == string.Empty) ? "0" : _toolCount.Text);
+
+        if (nonEmptyCount > 0)
         {
             _chosedToolsContainer.Add(new AppointmentToolTemplate(
-            _toolName.Text,
-            Convert.ToInt32(_toolCount.Text),
-            _chosedToolsContainer));
+                _toolName.Text,
+                nonEmptyCount,
+                _chosedToolsContainer));
         }
 
         await CloseAsync();
@@ -31,10 +33,15 @@ public partial class AddToolPopup : Popup
 
     private void VerifyCount()
     {
-        if (_toolCount.Text == "" || Convert.ToInt32(_toolCount.Text) < 0)
-        {
-            _toolCount.Text = "0";
-        }
+        if (_toolCount.Text == null || _toolCount.Text == string.Empty)
+            return;
+
+        var materialCount = (int)Convert.ToDouble(_toolCount.Text.Replace('.', ','));
+
+        if (materialCount <= 0)
+            _toolCount.Text = string.Empty;
+        else
+            _toolCount.Text = materialCount.ToString();
     }
 
     private void VerifyCount(object? sender, EventArgs e)

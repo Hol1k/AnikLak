@@ -21,12 +21,14 @@ public partial class AddDiscountPopup : Popup
     {
         VerifyValue();
 
-        if (_discountValue.Text != "0")
+        float nonEmptyDiscount= (float)Convert.ToDecimal((_discountValue.Text == null || _discountValue.Text == string.Empty) ? "0" : _discountValue.Text);
+
+        if (nonEmptyDiscount > 0)
         {
             _chosedDiscountsContainer.Add(new AppointmentDiscountTemplate(
-            _discountName.Text,
-            (float)Convert.ToDouble(_discountValue.Text),
-            _chosedDiscountsContainer));
+                _discountName.Text,
+                nonEmptyDiscount,
+                _chosedDiscountsContainer));
 
             _appointmentEditingWindow.RecalculatePrice();
         }
@@ -36,10 +38,13 @@ public partial class AddDiscountPopup : Popup
 
     private void VerifyValue()
     {
-        if (_discountValue.Text == "" || Convert.ToInt32(_discountValue.Text) < 0)
-        {
-            _discountValue.Text = "0";
-        }
+        if (_discountValue.Text == null || _discountValue.Text == string.Empty)
+            return;
+
+        _discountValue.Text = _discountValue.Text.Replace('.', ',');
+
+        if (Convert.ToDouble(_discountValue.Text) <= 0)
+            _discountValue.Text = string.Empty;
     }
 
     private void VerifyValue(object? sender, EventArgs e)

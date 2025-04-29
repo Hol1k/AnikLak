@@ -1,9 +1,9 @@
 ﻿#if ANDROID
 using Android.Widget;
+using Microsoft.Maui.Handlers;
 #endif
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
-using Microsoft.Maui.Handlers;
 
 namespace AnikLak;
 
@@ -21,41 +21,37 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+#if ANDROID
         EntryHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
         {
-#if ANDROID
             if (handler.PlatformView is EditText nativeEditText)
             {
                 nativeEditText.Background = null;
 
                 nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
             }
-#endif
         });
 
 		DatePickerHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
 		{
-#if ANDROID
             if (handler.PlatformView is EditText nativeEditText)
             {
                 nativeEditText.Background = null;
 
                 nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
             }
-#endif
         });
 
         EditorHandler.Mapper.AppendToMapping("CustomCursor", (handler, view) =>
         {
-#if ANDROID
             if (handler.PlatformView is EditText nativeEditText)
             {
                 nativeEditText.Background = null;
 
                 nativeEditText.SetHighlightColor(Android.Graphics.Color.Gray);
             }
-#endif
         });
+#endif
 
 #if DEBUG
         builder.Logging.AddDebug();

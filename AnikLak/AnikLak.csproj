@@ -96,6 +96,9 @@
 	  <MauiXaml Update="Subsystems\Appointments\AddToolPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Subsystems\Appointments\ChangeAppointmentStatusPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Subsystems\Materials\AddMaterialsPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

@@ -5,7 +5,7 @@ namespace AnikLak.Subsystems.Appointments;
 
 public partial class AppointmentEditing : ContentPage
 {
-	public int? appointmentId;
+	public int? AppointmentId;
 
 	public AppointmentEditing()
 	{
@@ -14,9 +14,16 @@ public partial class AppointmentEditing : ContentPage
 
     public AppointmentEditing(int appointmentId)
     {
-        this.appointmentId = appointmentId;
+        AppointmentId = appointmentId;
 
         InitializeComponent();
+    }
+
+    private async void ChangeStatus(object? sender, EventArgs e)
+    {
+        var popup = new ChangeAppointmentStatusPopup(_statusField);
+
+        await this.ShowPopupAsync(popup);
     }
 
     private async void AddService(object? sender, EventArgs e)

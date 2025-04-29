@@ -16,7 +16,7 @@
                 <Label Text="Клиент:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
                 <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                     Margin="5" Padding="12"
-                    x:Name="chosedClientContainer">
+                    x:Name="_chosedClientContainer">
                     <!--Клиент-->
                 </Border>
 
@@ -26,17 +26,17 @@
                     <Border Background="#808C7E6C" Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                         Margin="5" Padding="5,0,5,0" VerticalOptions="Center">
                         <DatePicker HeightRequest="40" VerticalOptions="Center" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
-                                x:Name="date"/>
+                                x:Name="_date"/>
                     </Border>
                 </HorizontalStackLayout>
 
                 <!--Статус записи-->
                 <HorizontalStackLayout>
-                    <Label Text="Дата:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
+                    <Label Text="Статус:" Margin="5" TextColor="Black" FontSize="20" VerticalOptions="Center" FontAttributes="Bold"/>
                     <Border Background="#808C7E6C" Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                             Margin="5" VerticalOptions="Center">
-                        <Button Background="#00000000" Text="Статус" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
-                                x:Name="status" Padding="7,0,7,0"/>
+                        <Button Background="#00000000" Text="Подтверждена" TextColor="#BF000000" FontAttributes="Bold" FontSize="18"
+                                x:Name="_statusField" Clicked="ChangeStatus" Padding="7,0,7,0"/>
                     </Border>
                 </HorizontalStackLayout>
 

@@ -15,9 +15,10 @@
                 <!--Выбранный клиент-->
                 <Label Text="Клиент:" Margin="5" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
                 <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
-                    Margin="5" Padding="12"
+                    Margin="5"
                     x:Name="_chosedClientContainer">
-                    <!--Клиент-->
+                    <Button Background="#00000000" Text="Выберать клиента" TextColor="#BF000000" FontAttributes="Bold" FontSize="20"
+                            x:Name="_clientField" Clicked="ChoseClient" Padding="7,0,7,0"/>
                 </Border>
 
                 <!--Выбранная дата-->

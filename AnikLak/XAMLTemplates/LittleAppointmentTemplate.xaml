@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnikLak.XAMLTemplates.LittleAppointmentTemplate">
     <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5">
+
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer Tapped="EditAppointment"/>
+        </Border.GestureRecognizers>
+
         <Grid>
 
             <Grid.RowDefinitions>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               x:Class="AnikLak.Subsystems.Appointments.ChoseAppointmentClientPopup"
+               VerticalOptions="End"
+               HorizontalOptions="Fill"
+               Color="#00000000">
+
+    <Border Background="#BFB49F" Stroke="#BFB49F" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,0,0">
+        <ScrollView>
+            <VerticalStackLayout x:Name="_clientsListContainer">
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Border>
+    
+</toolkit:Popup>

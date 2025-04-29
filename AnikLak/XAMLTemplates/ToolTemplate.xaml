@@ -4,6 +4,11 @@
              x:Class="AnikLak.XAMLTemplates.ToolTemplate">
     <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
             Margin="5" Padding="12">
+
+        <Border.GestureRecognizers>
+            <TapGestureRecognizer Tapped="EditTool"/>
+        </Border.GestureRecognizers>
+
         <Grid ColumnSpacing="8">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

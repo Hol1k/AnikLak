@@ -19,6 +19,13 @@ public partial class AppointmentEditing : ContentPage
         InitializeComponent();
     }
 
+    private async void ChoseClient(object? sender, EventArgs e)
+    {
+        var popup = new ChoseAppointmentClientPopup();
+
+        await this.ShowPopupAsync(popup);
+    }
+
     private async void ChangeStatus(object? sender, EventArgs e)
     {
         var popup = new ChangeAppointmentStatusPopup(_statusField);

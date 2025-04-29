@@ -23,7 +23,12 @@ public partial class AddServicePopup : Popup
 
         decimal nonEmptyPrice = Convert.ToDecimal((_price.Text == null || _price.Text == string.Empty) ? "0" : _price.Text);
 
-        _chosedServicesContainer.Add(new AppointmentServiceTemplate(_serviceName.Text, nonEmptyPrice, _chosedServicesContainer));
+        _chosedServicesContainer.Add(new AppointmentServiceTemplate(
+            _serviceName.Text,
+            nonEmptyPrice,
+            _chosedServicesContainer,
+            _appointmentEditingWindow));
+
         _appointmentEditingWindow.RecalculatePrice();
 
         await CloseAsync();

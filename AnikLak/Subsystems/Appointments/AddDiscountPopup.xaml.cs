@@ -28,7 +28,8 @@ public partial class AddDiscountPopup : Popup
             _chosedDiscountsContainer.Add(new AppointmentDiscountTemplate(
                 _discountName.Text,
                 nonEmptyDiscount,
-                _chosedDiscountsContainer));
+                _chosedDiscountsContainer,
+                _appointmentEditingWindow));
 
             _appointmentEditingWindow.RecalculatePrice();
         }

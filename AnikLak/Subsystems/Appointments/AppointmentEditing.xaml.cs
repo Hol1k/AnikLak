@@ -6,6 +6,7 @@ namespace AnikLak.Subsystems.Appointments;
 public partial class AppointmentEditing : ContentPage
 {
 	public int? AppointmentId;
+    public int? ClientId;
 
 	public AppointmentEditing()
 	{
@@ -21,7 +22,7 @@ public partial class AppointmentEditing : ContentPage
 
     private async void ChoseClient(object? sender, EventArgs e)
     {
-        var popup = new ChoseAppointmentClientPopup();
+        var popup = new ChoseAppointmentClientPopup(_clientField, this);
 
         await this.ShowPopupAsync(popup);
     }

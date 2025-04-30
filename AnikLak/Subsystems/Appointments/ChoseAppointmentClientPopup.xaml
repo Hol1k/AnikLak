@@ -7,8 +7,8 @@
                HorizontalOptions="Fill"
                Color="#00000000">
 
-    <Border Background="#BFB49F" Stroke="#BFB49F" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,0,0">
-        <ScrollView>
+    <Border Background="#BFB49F" Stroke="#BFB49F" StrokeThickness="0" StrokeShape="RoundRectangle 10,10,0,0" Margin="0,40,0,0">
+        <ScrollView MaximumHeightRequest="600" Margin="0,2,0,2">
             <VerticalStackLayout x:Name="_clientsListContainer">
 
             </VerticalStackLayout>

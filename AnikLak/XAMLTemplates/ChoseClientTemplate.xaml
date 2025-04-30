@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnikLak.XAMLTemplates.ChoseClientTemplate">
+    <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
+            Margin="5" Padding="12">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Фамилия Имя Отчество"
+                       FontSize="18" TextColor="Black" LineBreakMode="TailTruncation" MaxLines="1"
+                       x:Name="_name"/>
+                <Label Text="+7 (999) 999-99-99"
+                       FontSize="16" TextColor="#BF000000" LineBreakMode="TailTruncation" MaxLines="1"
+                       x:Name="_phoneNumber"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
+                <ImageButton Source="complete_red.svg"
+                             WidthRequest="30"
+                             HeightRequest="30"
+                             BackgroundColor="#00000000"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="ChoseClient"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>

@@ -67,11 +67,13 @@
                         <Button ImageSource="plus.svg" Margin="0" Padding="7" Scale="1.2" Background="#00000000"/>
                     </Border>
                     <!--Список записей-->
-                    <VerticalStackLayout Background="#00000000" Spacing="5"
-                            Margin="5,0,5,30"
-                            x:Name="lastAppointmentsContainer">
-                        <!--Записи-->
-                    </VerticalStackLayout>
+                    <ScrollView>
+                        <VerticalStackLayout Background="#00000000" Spacing="5"
+                                Margin="5,0,5,30"
+                                x:Name="lastAppointmentsContainer">
+                            <!--Записи-->
+                        </VerticalStackLayout>
+                    </ScrollView>
 
                 </VerticalStackLayout>
 

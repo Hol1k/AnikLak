@@ -81,6 +81,9 @@
 	  <Compile Update="XAMLTemplates\AppointmentTemplate.xaml.cs">
 	    <DependentUpon>AppointmentTemplate.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="XAMLTemplates\ChoseClientTemplate.xaml.cs">
+	    <DependentUpon>ChoseClientTemplate.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -145,6 +148,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="XAMLTemplates\AppointmentEditingFields\AppointmentToolTemplate.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="XAMLTemplates\ChoseClientTemplate.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="XAMLTemplates\ClientTemplate.xaml">

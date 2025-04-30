@@ -10,6 +10,7 @@ public partial class ClientEditing : ContentPage
 	public ClientEditing()
 	{
 		InitializeComponent();
+
         lastAppointmentsContainer.Add(new LittleAppointmentTemplate());
         lastAppointmentsContainer.Add(new LittleAppointmentTemplate());
     }

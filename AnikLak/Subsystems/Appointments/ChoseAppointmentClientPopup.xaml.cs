@@ -5,11 +5,23 @@ namespace AnikLak.Subsystems.Appointments;
 
 public partial class ChoseAppointmentClientPopup : Popup
 {
-	public ChoseAppointmentClientPopup()
-	{
-		InitializeComponent();
+    private Button _clientField;
+    private AppointmentEditing _appointmentEditingWindow;
 
-        _clientsListContainer.Add(new ClientTemplate());
-        _clientsListContainer.Add(new ClientTemplate());
+    public ChoseAppointmentClientPopup(Button clientField, AppointmentEditing appointmentEditingWindow)
+    {
+        _clientField = clientField;
+        _appointmentEditingWindow = appointmentEditingWindow;
+
+        InitializeComponent();
+
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
     }
 }

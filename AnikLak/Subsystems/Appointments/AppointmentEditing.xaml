@@ -17,7 +17,7 @@
                 <Border Background="#808C7E6C"  Stroke="#808C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                     Margin="5"
                     x:Name="_chosedClientContainer">
-                    <Button Background="#00000000" Text="Выберать клиента" TextColor="#BF000000" FontAttributes="Bold" FontSize="20"
+                    <Button Background="#00000000" Text="Выбрать клиента" TextColor="#BF000000" FontAttributes="Bold" FontSize="20"
                             x:Name="_clientField" Clicked="ChoseClient" Padding="7,0,7,0"/>
                 </Border>
 

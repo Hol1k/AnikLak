@@ -15,12 +15,12 @@
             <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                 <Label Text="Маски" LineBreakMode="TailTruncation" MaxLines="2"
                        FontSize="20" TextColor="Black"
-                       x:Name="name"/>
+                       x:Name="_name"/>
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
                 <Label Text="80" FontAttributes="Bold"
                        FontSize="24" TextColor="Black" HorizontalOptions="Center"
-                       x:Name="count"/>
+                       x:Name="_count"/>
             </VerticalStackLayout>
         </Grid>
     </Border>

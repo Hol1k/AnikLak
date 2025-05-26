@@ -52,7 +52,7 @@
             <!--Добавить материал-->
             <Border Background="#338C7E6C" Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                     Margin="9,4,9,10">
-                    <Button ImageSource="plus.svg" Scale="1.2" Background="#00000000"/>
+                <Button ImageSource="plus.svg" Scale="1.2" Background="#00000000" Clicked="AddNewMaterialRaw"/>
             </Border>
 
     </VerticalStackLayout>

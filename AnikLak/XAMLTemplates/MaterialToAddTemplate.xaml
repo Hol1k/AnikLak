@@ -16,13 +16,13 @@
         <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                 Grid.Column="0">
             <Entry Text="Апельсиновые палочки" Margin="5,0,5,0" TextColor="Black" FontSize="20" FontAttributes="Bold"
-                   x:Name="name"/>
+                   x:Name="_name"/>
         </Border>
         
         <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 5,5,5,5"
                 Grid.Column="1">
             <Entry Text="1" Margin="5,0,5,0" TextColor="Black" FontSize="20" FontAttributes="Bold"
-                   x:Name="count"/>
+                   x:Name="_count"/>
         </Border>
 
     </Grid>

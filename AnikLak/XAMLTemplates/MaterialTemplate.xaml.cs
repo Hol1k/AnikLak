@@ -1,4 +1,4 @@
-using AnikLak.ModelsDto;
+using AnikLak.ModelsDto.Materials;
 
 namespace AnikLak.XAMLTemplates;
 

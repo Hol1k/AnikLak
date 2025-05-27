@@ -1,4 +1,4 @@
-using AnikLak.ModelsDto;
+using AnikLak.ModelsDto.Materials;
 using AnikLak.XAMLTemplates;
 using CommunityToolkit.Maui.Views;
 using System.Net.Http.Json;
@@ -15,24 +15,19 @@ public partial class MaterialsList : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        await LoadMaterialsList();
+        await ShowMaterialsList();
     }
 
-    public async Task UpdateMaterialsList()
+    public async Task ShowMaterialsList()
     {
-        await LoadMaterialsList();
-    }
-
-    private async Task LoadMaterialsList()
-    {
-        stackLayout.Children.Clear();
+        _stackLayout.Children.Clear();
 
         List<MaterialDto> materials = new List<MaterialDto>();
         materials = await GetMaterialsAsync();
 
         foreach (MaterialDto material in materials)
         {
-            stackLayout.Add(new MaterialTemplate(material));
+            _stackLayout.Add(new MaterialTemplate(material));
         }
     }
 

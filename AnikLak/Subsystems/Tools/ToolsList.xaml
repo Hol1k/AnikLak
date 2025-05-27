@@ -12,7 +12,7 @@
 
 
         <ScrollView>
-            <VerticalStackLayout x:Name="stackLayout" Background="#BFB49F" Padding="5,5,5,110">
+            <VerticalStackLayout x:Name="_stackLayout" Background="#BFB49F" Padding="5,5,5,110">
 
             </VerticalStackLayout>
         </ScrollView>

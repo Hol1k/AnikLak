@@ -1,4 +1,4 @@
-using AnikLak.ModelsDto;
+using AnikLak.ModelsDto.Materials;
 using AnikLak.XAMLTemplates;
 using CommunityToolkit.Maui.Views;
 using System.Net.Http.Json;
@@ -74,6 +74,6 @@ public partial class AddMaterialsPopup : Popup
 
         await CloseAsync();
 
-        await _materialsListPage.UpdateMaterialsList();
+        await _materialsListPage.ShowMaterialsList();
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace AnikLak.ModelsDto
+﻿namespace AnikLak.ModelsDto.Materials
 {
     public class AddMaterialDto
     {

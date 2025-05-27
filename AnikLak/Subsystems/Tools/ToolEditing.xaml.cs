@@ -41,7 +41,8 @@ public partial class ToolEditing : ContentPage
             FunctioningCount = Convert.ToInt32(_functioningCountField.Text)
         };
 
-        if (toolToAdd.Count <= 0 || toolToAdd.FunctioningCount < 0)
+        if (Convert.ToInt32(_countField.Text) <= 0 || Convert.ToInt32(_functioningCountField.Text) < 0 ||
+            Convert.ToInt32(_functioningCountField.Text) > Convert.ToInt32(_countField.Text))
         {
             await DisplayAlert("Ошибка", "Нет корректных данных для отправки", "OK");
             return;

@@ -28,21 +28,21 @@
                     <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                             Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
                         <Entry Text="Фаммилия Имя Отчество" Margin="5,0,5,0" TextColor="Black" FontSize="20" FontAttributes="Bold"
-                               x:Name="name"/>
+                               x:Name="_name"/>
                     </Border>
 
                     <!--Номер клиента-->
                     <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
                             Grid.Row="1" Grid.Column="0">
                         <Entry Text="+7 (999) 999-99-99" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
-                               x:Name="number"/>
+                               x:Name="_number"/>
                     </Border>
 
                     <!--Заметка о клиенте-->
                     <Border Background="#338C7E6C"  Stroke="#338C7E6C" StrokeThickness="1" StrokeShape="RoundRectangle 10,10,10,10"
-                            Grid.Row="2" Grid.Column="0">
+                            Grid.Row="2" Grid.Column="0" MinimumHeightRequest="50">
                         <Editor Text="Заметка" Margin="5,0,5,0" TextColor="#BF000000" FontSize="18" FontAttributes="Bold"
-                                x:Name="note" TextChanged="TextChanged"/>
+                                x:Name="_note" TextChanged="TextChanged"/>
                     </Border>
 
                     <!--Количество посещений-->
@@ -50,7 +50,7 @@
                             Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
                         <VerticalStackLayout WidthRequest="100" VerticalOptions="Center">
                             <Label Text="14" TextColor="#BF000000" FontSize="48" FontAttributes="Bold"
-                                   x:Name="appointmentCount" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                   x:Name="_appointmentCount" VerticalOptions="Center" HorizontalOptions="Center"/>
                             <Label Text="Посещений" TextColor="#BF000000" FontSize="12" FontAttributes="Bold"
                                    VerticalOptions="Center" HorizontalOptions="Center"/>
                         </VerticalStackLayout>
@@ -70,7 +70,7 @@
                     <ScrollView>
                         <VerticalStackLayout Background="#00000000" Spacing="5"
                                 Margin="5,0,5,30"
-                                x:Name="lastAppointmentsContainer">
+                                x:Name="_lastAppointmentsContainer">
                             <!--Записи-->
                         </VerticalStackLayout>
                     </ScrollView>

@@ -20,18 +20,18 @@
             <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                 <Label Text="Фамилия Имя Отчество"
                        FontSize="20" TextColor="Black"
-                       x:Name="name"/>
+                       x:Name="_name"/>
                 <Label Text="+7 (999) 999-99-99"
                        FontSize="18" TextColor="#BF000000"
-                       x:Name="phoneNumber"/>
+                       x:Name="_phoneNumber"/>
                 <Label Text="Описание описание описание описание описание описание"
                        FontSize="18" TextColor="#BF000000" LineBreakMode="TailTruncation" MaxLines="2"
-                       x:Name="description"/>
+                       x:Name="_note"/>
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
                 <Label Text="14"
                        FontSize="48" TextColor="Black" HorizontalOptions="Center"
-                       x:Name="visitCount"/>
+                       x:Name="_visitCount"/>
                 <Label Text="Посещений"
                        FontSize="14" TextColor="#BF000000" HorizontalOptions="Center"/>
             </VerticalStackLayout>

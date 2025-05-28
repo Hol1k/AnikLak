@@ -1,3 +1,4 @@
+using AnikLak.ModelsDto.Services;
 using AnikLak.XAMLTemplates.AppointmentEditingFields;
 using CommunityToolkit.Maui.Views;
 
@@ -8,13 +9,17 @@ public partial class AddServicePopup : Popup
     private VerticalStackLayout _chosedServicesContainer;
     private AppointmentEditing _appointmentEditingWindow;
 
+    private List<ServiceDto> _services;
 
-    public AddServicePopup(VerticalStackLayout chosedServicesContainer, AppointmentEditing appointmentEditingWindow)
+
+    public AddServicePopup(VerticalStackLayout chosedServicesContainer, AppointmentEditing appointmentEditingWindow, List<ServiceDto> services)
 	{
         _chosedServicesContainer = chosedServicesContainer;
         _appointmentEditingWindow = appointmentEditingWindow;
 
         InitializeComponent();
+
+        _services = services;
     }
 
     private async void ApplyAdding(object? sender, EventArgs e)
@@ -27,7 +32,14 @@ public partial class AddServicePopup : Popup
             _serviceName.Text,
             nonEmptyPrice,
             _chosedServicesContainer,
-            _appointmentEditingWindow));
+            _appointmentEditingWindow,
+            _services));
+
+        _services.Add(new ServiceDto()
+        {
+            Name = _serviceName.Text,
+            Price = nonEmptyPrice
+        });
 
         _appointmentEditingWindow.RecalculatePrice();
 

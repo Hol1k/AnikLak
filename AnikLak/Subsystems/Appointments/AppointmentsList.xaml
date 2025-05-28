@@ -11,7 +11,7 @@
         </Grid.RowDefinitions>
 
         <ScrollView Background="#BFB49F">
-            <VerticalStackLayout x:Name="stackLayout" Padding="5,5,5,110">
+            <VerticalStackLayout x:Name="_stackLayout" Padding="5,5,5,110">
                 <!--Список записей-->
             </VerticalStackLayout>
         </ScrollView>

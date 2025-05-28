@@ -1,3 +1,4 @@
+using AnikLak.ModelsDto.Discounts;
 using AnikLak.XAMLTemplates.AppointmentEditingFields;
 using CommunityToolkit.Maui.Views;
 
@@ -8,13 +9,16 @@ public partial class AddDiscountPopup : Popup
     private VerticalStackLayout _chosedDiscountsContainer;
     private AppointmentEditing _appointmentEditingWindow;
 
+    private List<DiscountDto> _discounts;
 
-    public AddDiscountPopup(VerticalStackLayout chosedDiscountsContainer, AppointmentEditing appointmentEditingWindow)
+    public AddDiscountPopup(VerticalStackLayout chosedDiscountsContainer, AppointmentEditing appointmentEditingWindow, List<DiscountDto> discounts)
     {
         _chosedDiscountsContainer = chosedDiscountsContainer;
         _appointmentEditingWindow = appointmentEditingWindow;
 
         InitializeComponent();
+
+        _discounts = discounts;
     }
 
     private async void ApplyAdding(object? sender, EventArgs e)
@@ -29,7 +33,14 @@ public partial class AddDiscountPopup : Popup
                 _discountName.Text,
                 nonEmptyDiscount,
                 _chosedDiscountsContainer,
-                _appointmentEditingWindow));
+                _appointmentEditingWindow,
+                _discounts));
+
+            _discounts.Add(new DiscountDto()
+            {
+                Name = _discountName.Text,
+                Value = nonEmptyDiscount
+            });
 
             _appointmentEditingWindow.RecalculatePrice();
         }

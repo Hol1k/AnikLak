@@ -1,3 +1,4 @@
+using AnikLak.ModelsDto.Tools;
 using AnikLak.XAMLTemplates.AppointmentEditingFields;
 using CommunityToolkit.Maui.Views;
 
@@ -7,11 +8,15 @@ public partial class AddToolPopup : Popup
 {
     private VerticalStackLayout _chosedToolsContainer;
 
-    public AddToolPopup(VerticalStackLayout chosedToolsContainer)
+    private List<ToolDto> _tools;
+
+    public AddToolPopup(VerticalStackLayout chosedToolsContainer, List<ToolDto> tools)
     {
         _chosedToolsContainer = chosedToolsContainer;
 
         InitializeComponent();
+
+        _tools = tools;
     }
 
     private async void ApplyAdding(object? sender, EventArgs e)
@@ -25,7 +30,14 @@ public partial class AddToolPopup : Popup
             _chosedToolsContainer.Add(new AppointmentToolTemplate(
                 _toolName.Text,
                 nonEmptyCount,
-                _chosedToolsContainer));
+                _chosedToolsContainer,
+                _tools));
+
+            _tools.Add(new ToolDto()
+            {
+                Name = _toolName.Text,
+                Count = nonEmptyCount
+            });
         }
 
         await CloseAsync();

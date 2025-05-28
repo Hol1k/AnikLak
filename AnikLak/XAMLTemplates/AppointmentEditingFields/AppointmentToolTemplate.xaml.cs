@@ -1,3 +1,5 @@
+using AnikLak.ModelsDto.Tools;
+
 namespace AnikLak.XAMLTemplates.AppointmentEditingFields;
 
 public partial class AppointmentToolTemplate : ContentView
@@ -5,7 +7,9 @@ public partial class AppointmentToolTemplate : ContentView
     private int _count;
     private VerticalStackLayout _parent;
 
-    public AppointmentToolTemplate(string toolName, int count, VerticalStackLayout parent)
+    private List<ToolDto> _tools;
+
+    public AppointmentToolTemplate(string toolName, int count, VerticalStackLayout parent, List<ToolDto> tools)
     {
 		InitializeComponent();
 
@@ -13,6 +17,7 @@ public partial class AppointmentToolTemplate : ContentView
         _count = count;
         _toolName.Text = $"• {toolName}";
         _countField.Text = count.ToString();
+        _tools = tools;
     }
 
     private void VerifyToolCount(object? sender, EventArgs e)
@@ -33,5 +38,6 @@ public partial class AppointmentToolTemplate : ContentView
     private void RemoveTool(object? sender, EventArgs e)
     {
         _parent.Remove(this);
+        _tools.Remove(_tools.FirstOrDefault(t => t.Name == _toolName.Text) ?? new());
     }
 }

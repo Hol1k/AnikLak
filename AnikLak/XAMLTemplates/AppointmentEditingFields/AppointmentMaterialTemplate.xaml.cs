@@ -1,3 +1,5 @@
+using AnikLak.ModelsDto.Materials;
+
 namespace AnikLak.XAMLTemplates.AppointmentEditingFields;
 
 public partial class AppointmentMaterialTemplate : ContentView
@@ -5,7 +7,9 @@ public partial class AppointmentMaterialTemplate : ContentView
     private int _count;
     private VerticalStackLayout _parent;
 
-    public AppointmentMaterialTemplate(string materialName, int count, VerticalStackLayout parent)
+    private List<MaterialDto> _materials;
+
+    public AppointmentMaterialTemplate(string materialName, int count, VerticalStackLayout parent, List<MaterialDto> materials)
     {
         InitializeComponent();
 
@@ -13,6 +17,7 @@ public partial class AppointmentMaterialTemplate : ContentView
         _count = count;
         _materialName.Text = $"• {materialName}";
         _countField.Text = count.ToString();
+        _materials = materials;
     }
 
     private void VerifyMaterialCount(object? sender, EventArgs e)
@@ -33,5 +38,6 @@ public partial class AppointmentMaterialTemplate : ContentView
     private void RemoveMaterial(object? sender, EventArgs e)
     {
         _parent.Remove(this);
+        _materials.Remove(_materials.FirstOrDefault(t => t.Name == _materialName.Text) ?? new());
     }
 }

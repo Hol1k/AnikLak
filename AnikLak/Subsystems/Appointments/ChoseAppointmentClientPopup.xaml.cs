@@ -1,3 +1,4 @@
+using AnikLak.ModelsDto.Clients;
 using AnikLak.XAMLTemplates;
 using CommunityToolkit.Maui.Views;
 
@@ -14,14 +15,10 @@ public partial class ChoseAppointmentClientPopup : Popup
         _appointmentEditingWindow = appointmentEditingWindow;
 
         InitializeComponent();
+    }
 
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
-        _clientsListContainer.Add(new ChoseClientTemplate(_clientField, this, _appointmentEditingWindow));
+    public async void AddNewClient(ClientDto clientInfo)
+    {
+        _clientsListContainer.Add(new ChoseClientTemplate(clientInfo, _clientField, this, _appointmentEditingWindow));
     }
 }

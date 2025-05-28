@@ -20,21 +20,21 @@
             <VerticalStackLayout Grid.Column="0" VerticalOptions="Center">
                 <Label Text="Сегодня, 15:00"
                        FontSize="20" TextColor="Black"
-                       x:Name="date"/>
+                       x:Name="_date"/>
                 <Label Text="Фамилия Имя Отчество"
                        FontSize="18" TextColor="#BF000000"
-                       x:Name="name"/>
+                       x:Name="_name"/>
                 <Label Text="• Услуга1&#10;• Услуга2&#10;• Услуга3"
                        FontSize="18" TextColor="#BF000000"
-                       x:Name="services"/>
+                       x:Name="_services"/>
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" HorizontalOptions="End">
                 <Label Text="(1400-15%)"
                        FontSize="14" TextColor="#BF000000" HorizontalOptions="End"
-                       x:Name="priceCalculate"/>
+                       x:Name="_priceCalculate"/>
                 <Label Text="1190₽"
                        FontSize="36" TextColor="Black" HorizontalOptions="End"
-                       x:Name="price"/>
+                       x:Name="_price"/>
                 <Label Text="Стоимость"
                        FontSize="14" TextColor="#BF000000" HorizontalOptions="End"/>
             </VerticalStackLayout>

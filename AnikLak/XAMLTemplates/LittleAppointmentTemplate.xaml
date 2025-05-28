@@ -21,15 +21,15 @@
             <VerticalStackLayout Grid.Column="0" Padding="2">
 
                 <Label Text="Ожидает выполнения" FontSize="14" TextColor="#BF000000"
-                       x:Name="status"/>
+                       x:Name="_status"/>
                 <Label Text="Сегодня, 15:00" FontSize="20" TextColor="#BF000000" FontAttributes="Bold"
-                       x:Name="dateTime"/>
+                       x:Name="_dateTime"/>
                 
             </VerticalStackLayout>
 
             <Label Text="1190 ₽" TextColor="Black" FontSize="36"
                    Grid.Column="1"
-                   x:Name="price"/>
+                   x:Name="_price"/>
 
         </Grid>
     </Border>

@@ -1,4 +1,6 @@
+using AnikLak.ModelsDto.Appointments;
 using AnikLak.ModelsDto.Clients;
+using AnikLak.Subsystems.Appointments;
 using AnikLak.XAMLTemplates;
 using Microsoft.Maui.Layouts;
 using System.Net.Http.Json;
@@ -10,6 +12,7 @@ public partial class ClientEditing : ContentPage
     private ClientsList _clientsListPage;
     private readonly string _addNewClientlUrl = "http://hol1k.ru:5000/clients/add-new-client";
     private readonly string _updateClientValuesUrl = "http://hol1k.ru:5000/clients/update-client-values";
+    private readonly string _getAllAppointmentsUrl = "http://hol1k.ru:5000/appointments/get-appointments-list";
 
     private int? _id;
 
@@ -28,9 +31,52 @@ public partial class ClientEditing : ContentPage
         double noteHeight = 0.0;
         noteHeight = _note.ComputeDesiredSize(_note.Width, double.PositiveInfinity).Height;
         ((Border)_note.Parent).HeightRequest = noteHeight;
+    }
 
-        _lastAppointmentsContainer.Add(new LittleAppointmentTemplate());
-        _lastAppointmentsContainer.Add(new LittleAppointmentTemplate());
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await ShowAppointmentsList();
+    }
+
+    private async Task ShowAppointmentsList()
+    {
+        _lastAppointmentsContainer.Children.Clear();
+
+        List<AppointmentDto> appointmentList = new List<AppointmentDto>();
+        appointmentList = await GetAppointmentsAsync();
+
+        foreach (AppointmentDto appointment in appointmentList)
+        {
+            if (appointment.ClientId == _id)
+                _lastAppointmentsContainer.Insert(0, new LittleAppointmentTemplate(appointment));
+        }
+    }
+
+    private async Task<List<AppointmentDto>> GetAppointmentsAsync()
+    {
+        var client = new HttpClient();
+
+        try
+        {
+            var response = await client.GetAsync(_getAllAppointmentsUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var appointmentList = await response.Content.ReadFromJsonAsync<List<AppointmentDto>>();
+                return appointmentList ?? new List<AppointmentDto>();
+            }
+            else
+            {
+                Console.WriteLine($"Ошибка API: {response.StatusCode}");
+                return new List<AppointmentDto>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Исключение при запросе: {ex.Message}");
+            return new List<AppointmentDto>();
+        }
     }
 
     private void TextChanged(object sender, TextChangedEventArgs e)
@@ -41,6 +87,11 @@ public partial class ClientEditing : ContentPage
             noteHeight = editor.ComputeDesiredSize(editor.Width, double.PositiveInfinity).Height;
             ((Border)editor.Parent).HeightRequest = noteHeight;
         }
+    }
+
+    private async void AddNewAppointment(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AppointmentEditing(new AppointmentDto(), null));
     }
 
     private async void ApplyEditing(object? sender, EventArgs e)

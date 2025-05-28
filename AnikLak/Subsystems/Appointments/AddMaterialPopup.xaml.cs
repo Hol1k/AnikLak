@@ -1,3 +1,4 @@
+using AnikLak.ModelsDto.Materials;
 using AnikLak.XAMLTemplates.AppointmentEditingFields;
 using CommunityToolkit.Maui.Views;
 
@@ -7,11 +8,15 @@ public partial class AddMaterialPopup : Popup
 {
     private VerticalStackLayout _chosedMaterialsContainer;
 
-    public AddMaterialPopup(VerticalStackLayout chosedMaterialsContainer)
+    private List<MaterialDto> _materials;
+
+    public AddMaterialPopup(VerticalStackLayout chosedMaterialsContainer, List<MaterialDto> materials)
     {
         _chosedMaterialsContainer = chosedMaterialsContainer;
 
         InitializeComponent();
+
+        _materials = materials;
     }
 
     private async void ApplyAdding(object? sender, EventArgs e)
@@ -25,7 +30,14 @@ public partial class AddMaterialPopup : Popup
             _chosedMaterialsContainer.Add(new AppointmentMaterialTemplate(
                 _materialName.Text,
                 nonEmptyCount,
-                _chosedMaterialsContainer));
+                _chosedMaterialsContainer,
+                _materials));
+
+            _materials.Add(new MaterialDto()
+            {
+                Name = _materialName.Text,
+                Count = nonEmptyCount
+            });
         }
 
         await CloseAsync();

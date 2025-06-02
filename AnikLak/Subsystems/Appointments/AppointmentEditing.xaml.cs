@@ -17,7 +17,6 @@ public partial class AppointmentEditing : ContentPage
     private readonly string _getAllClientsUrl = "http://hol1k.ru:5000/clients/get-clients-list";
     private readonly string _addNewAppointmentlUrl = "http://hol1k.ru:5000/appointments/add-new-appointment";
     private readonly string _updateClientValuesUrl = "http://hol1k.ru:5000/appointments/update-appointment-values";
-    private readonly string _addMaterialUrl = "http://hol1k.ru:5000/materials/add-material";
 
     private AppointmentsList? _appointmentListPage;
 
@@ -215,6 +214,7 @@ public partial class AppointmentEditing : ContentPage
 
         var appointmentToAdd = new AddAppointmentDto()
         {
+            Id = 0,
             ClientId = ClientId,
             Date = new DateOnly(_date.Date.Year, _date.Date.Month, _date.Date.Day).ToString(),
             Time = new TimeOnly(_date.Date.Hour, _date.Date.Minute, _date.Date.Second).ToString(),
@@ -239,28 +239,13 @@ public partial class AppointmentEditing : ContentPage
         {
             var responseAppointment = await client.PostAsJsonAsync(_addNewAppointmentlUrl, appointmentToAdd);
 
-            List<AddMaterialDto> materialsToRemove = new List<AddMaterialDto>();
-            foreach (MaterialDto materialDto in _materials)
-            {
-                materialsToRemove.Add(new AddMaterialDto
-                {
-                    Name = materialDto.Name,
-                    Count = -materialDto.Count
-                });
-            }
-            var responseMaterial = await client.PutAsJsonAsync(_addMaterialUrl, materialsToRemove);
-
-            if (responseAppointment.IsSuccessStatusCode && responseMaterial.IsSuccessStatusCode)
+            if (responseAppointment.IsSuccessStatusCode)
             {
                 await DisplayAlert("Успех", "Запись успешно добавлена", "OK");
             }
-            else if (responseMaterial.IsSuccessStatusCode)
-            {
-                await DisplayAlert("Ошибка", $"Ошибка сервера: {responseAppointment.StatusCode}", "OK");
-            }
             else
             {
-                await DisplayAlert("Ошибка", $"Ошибка сервера: {responseMaterial.StatusCode}", "OK");
+                await DisplayAlert("Ошибка", $"Ошибка сервера: {responseAppointment.StatusCode}", "OK");
             }
         }
         catch (Exception ex)
